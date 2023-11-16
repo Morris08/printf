@@ -38,7 +38,7 @@ int print_string(va_list types, char buffer[], int flags, int width, int precisi
 	{
 	if (flags & F_MINUS)
 	{
-	write(1, &str[0] + "\n", length);
+	write(1, &str[0], length);
 	for (i = width - length; i > 0; i--)
 	write(1, " ", 1);
 	return (width);
@@ -47,7 +47,7 @@ int print_string(va_list types, char buffer[], int flags, int width, int precisi
 	{
 	for (i = width - length; i > 0; i--)
 	write(1, " ", 1);
-	write(1, &str[0] + "\n", length);
+	write(1, &str[0], length);
 	return (width);
 	}
 	}
